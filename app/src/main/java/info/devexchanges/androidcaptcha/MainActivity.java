@@ -3,7 +3,6 @@ package info.devexchanges.androidcaptcha;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatEditText;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -34,13 +33,9 @@ public class MainActivity extends AppCompatActivity {
                 edtTextCaptcha.setError(null);
                 int numberOfCaptchaFalse = 0;
 
-                String textCaptchaAnswer = textCaptcha.answer;
-                String mathCaptchaAnser = mathCaptcha.answer;
-                Log.d("Main", textCaptcha.answer + "  " + mathCaptcha.answer);
-
                 //checking text captcha
                 if (!textCaptcha.checkAnswer(edtTextCaptcha.getText().toString().trim())) {
-                    edtTextCaptcha.setError("Captcha not match");
+                    edtTextCaptcha.setError("Captcha is not match");
                     numberOfCaptchaFalse++;
                 }
 

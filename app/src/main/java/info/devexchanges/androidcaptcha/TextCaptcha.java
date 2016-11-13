@@ -33,7 +33,7 @@ public class TextCaptcha extends Captcha {
         setHeight(height);
         setWidth(width);
         this.options = opt;
-        usedColors = new ArrayList<Integer>();
+        usedColors = new ArrayList<>();
         this.wordLength = wordLength;
         this.image = image();
     }
